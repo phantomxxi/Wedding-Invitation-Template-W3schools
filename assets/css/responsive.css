@@ -1,0 +1,23 @@
+@media only screen and (max-width: 700px) {
+  .header__nav {
+    display: none;
+  }
+  .footer {
+    padding-bottom: 20px;
+  }
+  .main__img,
+  .you__invite {
+    grid-template-rows: 40vh;
+  }
+
+  /* you invite */
+  .you__invite-details h2,
+  .main__img-details h2 {
+    font-size: 40px;
+  }
+  .you__invite-details p,
+  .main__img-details p {
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
