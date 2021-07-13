@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template In W3School</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- link responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header__nav">
+        <nav class="menu__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Jane & John</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Wedding</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">RSVP</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- main img -->
+      <main>
+        <!--  -->
+        <section class="main__img">
+          <img src="assets/img/wedding_couple.jpg" alt="" />
+          <div class="main__img-details">
+            <h2>Jane & John</h2>
+            <p>Are getting married</p>
+            <p class="wedding__date">17.07.2017</p>
+          </div>
+        </section>
+        <!-- wedding detail -->
+        <section class="wedding__detail">
+          <div class="row">
+            <h3 class="wedding__heading">Jane & John</h3>
+            <img src="assets/img/wedding_couple2.jpg" alt="" />
+            <p>
+              You all know us. And we all know you. We are getting married lorem
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat
+              non proident, sunt in culpa qui officia deserunt mollit anim id
+              est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.
+            </p>
+            <a href="#" class="btn btn-wedding-detail">Wedding Details</a>
+          </div>
+        </section>
+        <!-- you are invited -->
+        <section class="you__invite">
+          <img src="assets/img/flowers.jpg" alt="" />
+          <div class="you__invite-details">
+            <h2>You Are Invited</h2>
+            <p>Of course ...</p>
+          </div>
+        </section>
+        <!-- the wedding -->
+        <section class="the__wedding">
+          <div class="row">
+            <h3 class="wedding__heading">THE WEDDING</h3>
+            <img src="assets/img/wedding_location.jpg" alt="" />
+            <div class="the__wedding-place">
+              <div class="the__wedding-when">
+                <h3>When</h3>
+                <p>Wedding Ceremony - 2:00pm</p>
+                <p>Reception & Dinner - 5:00pm</p>
+              </div>
+              <div class="the__wedding-where">
+                <h3>Where</h3>
+                <p>Some place, an address</p>
+                <p>Some where, some address</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- wedding card -->
+        <section class="wedding__card">
+          <h3 class="wedding__card-heading">HOPE YOU CAN MAKE IT!</h3>
+          <p class="wedding__card-desc">Kindly Respond By January, 2017</p>
+          <a href="#" class="btn btn-wedding-card">RSVP</a>
+        </section>
+        <!-- form -->
+        <div id="modal__form">
+          <div class="modal__form-content">
+            <h3>CAN YOU COME?</h3>
+            <p>We really hope you can make it.</p>
+            <form action="" class="modal-form__invite">
+              <input type="text" placeholder="Name(s)" />
+              <p>Sincerely, John & Jane</p>
+              <div class="btns">
+                <button type="button" class="accept">Going</button>
+                <button type="button" class="reject">Can't come</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--  -->
+      </main>
+      <footer class="footer">
+        <p class="copy-right">&copy; Made with love</p>
+      </footer>
+    </div>
+    <script>
+      const btn_OpenModalForm = document.querySelector(".btn-wedding-card");
+      const modalForm = document.querySelector("#modal__form");
+      const btn_CloseModalForm = document.querySelector(".reject");
+      btn_OpenModalForm.addEventListener("click", function () {
+        modalForm.style.display = "block";
+      });
+      btn_CloseModalForm.addEventListener("click", function () {
+        modalForm.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
