@@ -1,0 +1,305 @@
+/* default setting */
+
+:root {
+  --pink-color: #ffdddd;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+img {
+  width: 100%;
+  display: block;
+  /* object-fit: cover; */
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.row {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.wrapper {
+  position: relative;
+}
+/* main */
+/* header */
+.header__nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.7);
+}
+.header__nav-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 6px 15px;
+}
+.header__nav-link {
+  display: block;
+  text-align: center;
+  padding: 6px;
+  color: black;
+  font-weight: 200;
+}
+.header__nav-link:hover {
+  background: #000;
+  color: white;
+}
+/* top img */
+.main__img {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 80vh;
+}
+.main__img img,
+.main__img-details {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
+.main__img img {
+  height: 100%;
+  z-index: 2;
+  filter: grayscale(60%);
+}
+.main__img-details {
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  align-self: center;
+  justify-self: center;
+}
+.main__img-details h2 {
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+.main__img-details p {
+  font-size: 30px;
+  font-weight: 200;
+  letter-spacing: 5px;
+}
+.wedding__date {
+  margin-top: 10px;
+  font-size: 16px;
+}
+/* wedding__detail */
+.wedding__detail,
+.the__wedding {
+  padding: 70px 12px 50px;
+  text-align: center;
+  background: var(--pink-color);
+  filter: grayscale(50%);
+}
+.wedding__detail .row > * {
+  margin-bottom: 25px;
+}
+.wedding__heading {
+  font-size: 38px;
+  font-weight: normal;
+  color: #757575;
+  text-align: center;
+}
+.wedding__detail img {
+  border-radius: 4px;
+}
+.wedding__detail p {
+  text-align: left;
+  font-style: italic;
+  line-height: 2;
+  color: rgba(0, 0, 0, 0.8);
+}
+.btn-wedding-detail {
+  padding: 15px 18px;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  background: #000;
+}
+.btn-wedding-detail:hover {
+  background: rgb(209, 209, 209);
+  color: black;
+}
+/* you__invite */
+.you__invite {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 90vh;
+}
+.you__invite img,
+.you__invite-details {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
+.you__invite img {
+  height: 100%;
+}
+.you__invite-details {
+  align-self: center;
+  justify-self: center;
+  color: white;
+  text-align: center;
+}
+.you__invite-details h2 {
+  font-size: 50px;
+  font-weight: normal;
+  letter-spacing: 6px;
+}
+.you__invite-details p {
+  font-size: 28px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+/* the__wedding */
+.the__wedding img {
+  margin: 60px 0;
+  border-radius: 8px;
+}
+.the__wedding-place {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.the__wedding-place h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #2c2b2b;
+}
+.the__wedding-place p {
+  line-height: 3;
+}
+/* wedding__card */
+.wedding__card {
+  padding: 60px 12px;
+  background: #ffdddd;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.wedding__card-heading {
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+.wedding__card-desc {
+  font-size: 19px;
+  font-weight: 400;
+  margin: 20px 0;
+  letter-spacing: 3px;
+}
+.btn-wedding-card {
+  display: block;
+  background: #f44336a4;
+  padding: 20px;
+  border-radius: 3px;
+  text-align: center;
+  min-width: 140px;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.btn-wedding-card:hover {
+  background: #f443365b;
+}
+/* -------------------------------- */
+/* modal form */
+#modal__form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  padding-top: 100px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.modal__form-content {
+  background: white;
+  width: 500px;
+  margin: 0 auto;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 3px;
+  /* animation */
+  animation: animatezoom 0.5s ease-in;
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.modal__form-content h3 {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+.modal__form-content p {
+  margin: 15px 0;
+}
+.modal-form__invite input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  color: #777;
+  border-radius: 5px;
+  border: 1px solid rgb(233, 233, 233);
+}
+.modal-form__invite p {
+  font-style: italic;
+  font-size: 17px;
+}
+.btns {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.btns button {
+  padding: 12px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+.btns button:hover {
+  background: #777;
+  color: black;
+}
+.accept {
+  background: rgb(44, 138, 44);
+}
+.reject {
+  background: rgb(216, 65, 95);
+}
+/* --------------------------- */
+/* footer */
+.footer {
+  text-align: center;
+  color: white;
+  background: #000;
+  padding: 20px 12px 60px;
+}
